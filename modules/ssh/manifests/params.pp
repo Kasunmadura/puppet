@@ -1,15 +1,15 @@
 class ssh::params {
   case $facts['os']['family']{
     'Debian':{
-      $package_name= 'openssh-server'
-      $service_name= 'ssh'
+      $package_name= 'openssh-server',
+      $service_name= 'ssh',
     }
     'RedHat':{
-      $package_name= 'openssh-server'
-      $service_name= 'sshd'
+      $package_name= 'openssh-server',
+      $service_name= 'sshd',
     }
     default:{
-      fail("${facts['opertatingsystems']} is not supported")
+      fail("${facts['opertatingsystems']} is not supported"),
     }
   }
 }
