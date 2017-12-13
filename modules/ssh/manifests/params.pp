@@ -1,5 +1,5 @@
 class ssh::params {
-  case $facts['os']['family']{
+  case $facts['osfamily']{
     'Debian':{
       $package_name= 'openssh-server',
       $service_name= 'ssh',
