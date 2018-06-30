@@ -44,3 +44,21 @@
 
   * desired state of the node being managed (open source puppet installtion we have to manully config to puppet db )
   * Seperate privileges
+
+###  Puppet Nodes
+
+  * Nodes are virtual, pythical or non-ephemeral cloud systems
+  * Runs the puppet agent
+      * Require ports  8149 for puppet agent , 61613 for MCollective
+
+
+#### Puppet commands
+
+1. Setup run intervel
+
+       puppet config set runinterval 2m --section main
+       service puppet restart
+
+2. install puppet module
+
+      puppet module install puppetlab-java
